@@ -1,0 +1,32 @@
+{
+    "m1": {
+        "sr" : "Team Member 1",
+        "urlToimage": "https://assets.devfolio.co/users/e2a3cead287744ab8513eea57d4f5612/avatar-0ff263a8-1aec-432f-add8-5cf1ddaa1773.jpeg",
+        "name": "Mihir Panchal",
+        "mail":"mihirpanchal5400@gmail.com",
+        "phone":"+91 9833371632",
+        "linkedIn": "www.linkedin.com/in/mihir-panchal-9b6677220"
+    },
+    "m2": {
+        "sr" : "Team Member 2",
+        "urlToimage": "https://assets.devfolio.co/users/69fef549f173421fa5ce2ecb6c3fb276/avatar-ff4d5e97-f99f-42a8-9ec8-4c05eb284136.jpeg",
+        "name": "Prinkal Doshi",
+        "mail":"prinkaldoshi@gmail.com",
+        "phone":"+91 7021804184"
+    },
+    "m3": {
+        "sr" : "Team Member 3",
+        "urlToimage": "https://visualpharm.com/assets/381/Admin-595b40b65ba036ed117d3b23.svg",
+        "name": "Vatsal Kotha",
+        "mail":"vatsalkotha@gmail.com",
+        "phone":"+91 9137401776"
+    },
+    "m4": {
+        "sr" : "Team Member 4",
+        "urlToimage": "https://visualpharm.com/assets/90/Businessman-595b40b65ba036ed117d3ce8.svg",
+        "name": "Sarid Qureshi",
+        "mail":"saridqureshi299@gmail.com",
+        "phone":"+91 8369456169"
+    }
+    
+}
