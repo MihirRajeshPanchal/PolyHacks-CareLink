@@ -1,4 +1,5 @@
 import streamlit as st
+from scripts import tts
 
 st.set_page_config(
     page_title="Login",
@@ -13,8 +14,11 @@ password = st.text_input('Enter your password', '', type='password')
 if st.button('Login'):
     if email == '' or password == '':
         st.error("Please fill the credentials")
+        tts.tts("Please fill the credentials")
     else:
-        st.success("login")
+        st.success("Login Successful")
+        tts.tts("Login Successful")
+        st.balloons()
 
 hide_streamlit_style = """
             <style>

@@ -1,6 +1,5 @@
 import streamlit as st
-
-import streamlit as st
+from scripts import tts
 
 st.title('Signup')
 
@@ -19,8 +18,11 @@ passwd = st.text_input('Password','',type="password")
 if st.button('Sign Up'):
     if first_name == '' or last_name == '' or email_id == '' or passwd == '':
         st.error("Please Fill up all the fields")
+        tts.tts("Please Fill up all the fields")
     else:
         st.success('Sign Up Successfull !')
+        tts.tts("Sign Up Successfull !")
+        st.balloons()
 
 hide_streamlit_style = """
             <style>
