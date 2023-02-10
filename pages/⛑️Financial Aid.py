@@ -47,9 +47,3 @@ if st.button('Apply'):
         st.error('Please fill the necessary details !')
     else:
         st.success("Applied Successfully !")
-
-# st.write("I'm ", age, 'years old')
-
-# income = st.text_input("Annual Income", placeholder="₹")
-
-# expenses = st.text_input("Annual Expenses0", placeholder="₹")
