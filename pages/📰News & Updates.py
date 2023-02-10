@@ -30,7 +30,7 @@ for i in range(20):
             )
         with col2:
             placeholder = st.empty()
-            placeholder.text(f"News {i}")
+            placeholder.text(f"News {i+1}")
             st.subheader(data[i]["title"])
     else:
         with col2:
@@ -43,7 +43,7 @@ for i in range(20):
             )
         with col1:
             placeholder = st.empty()
-            placeholder.text(f"News {i}")
+            placeholder.text(f"News {i+1}")
             st.subheader(data[i]["title"])
             
 
