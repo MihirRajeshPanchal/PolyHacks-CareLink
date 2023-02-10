@@ -1,3 +1,4 @@
+from sklearn import preprocessing
 import streamlit as st
 from scripts import tts
 import pandas as pd
@@ -13,25 +14,47 @@ def mlmodels():
     sc = StandardScaler()
     x_train = sc.fit_transform(x_train)
     x_test = sc.fit_transform(x_test)
+    
+    # age=int(age)
+    # sex=int(sex)
+    # cp=int(cp)
+    # trestbps=int(trestbps)
+    # chol=int(chol)
+    # fbs=int(fbs)
+    # restecg=int(restecg)
+    # thalach=int(thalach)
+    # exang=int(exang)
+    # oldpeak=float(oldpeak)
+    # slope=int(slope)
+    # ca=int(ca)
+    # thal=int(ca)
+    
     if option=="Logistic Classification":
         from sklearn.linear_model import LogisticRegression
         model = LogisticRegression()
         model.fit(x_train, y_train)
-        return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
     elif option=="Support Vector Machine Classifications":
-        pass
+        from sklearn.svm import SVC
+        model = SVC(kernel = 'linear', random_state = 0)
+        model.fit(x_train, y_train)
+        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
     elif option=="Naive Bayes Classification":
-        pass
+        from sklearn.naive_bayes import GaussianNB
+        model = GaussianNB()
+        model.fit(x_train, y_train)
+        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
     elif option=="K Nearest Neighbor Classification":
         from sklearn.neighbors import KNeighborsClassifier
         model = KNeighborsClassifier(n_neighbors=3, metric = 'minkowski', p=2)
         model.fit(x_train, y_train)
-        return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
     elif option=="Decision Tree Classifier":
         from sklearn.tree import DecisionTreeClassifier
         model = DecisionTreeClassifier()
         model.fit(x_train, y_train)
-        return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+    return model.score(x_train,y_train)
     
     
 
@@ -77,8 +100,10 @@ if st.button('Analyze'):
         tts.tts("Please fill all the data")
     else:
         pred = mlmodels()
-        st.success("Accuracy Received : ",pred)
-        tts.tts("Accuracy Received : ",pred)
+        pred=pred*100
+        pred=str(pred)
+        st.success("Accuracy Received : "+pred)
+        tts.tts("Accuracy Received : "+pred)
         st.balloons()
 
 
