@@ -1,5 +1,10 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="News & Update",
+    page_icon="📰",
+)
+
 st.title('News & Updates')
 
 hide_streamlit_style = """

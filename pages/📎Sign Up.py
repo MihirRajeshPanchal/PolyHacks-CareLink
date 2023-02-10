@@ -1,6 +1,11 @@
 import streamlit as st
 from scripts import tts
 
+st.set_page_config(
+    page_title="SignUp",
+    page_icon="📎",
+)
+
 st.title('Signup')
 
 first_name = st.text_input('Fisrt Name', placeholder='John')

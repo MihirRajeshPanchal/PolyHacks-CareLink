@@ -2,10 +2,14 @@ import streamlit as st
 from scripts import chatgpt
 from scripts import tts
 
+st.set_page_config(
+    page_title="Connect",
+    page_icon="👪",
+)
+
 def ttscall():
     prompt="Hi"
-    tts.tts(prompt)
-    
+    tts.tts(prompt)  
 
 def chatgptcall():
     chatgpt.chatgpt("hello")

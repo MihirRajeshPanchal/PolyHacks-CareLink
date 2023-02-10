@@ -1,11 +1,11 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Community",
-    page_icon="🗨️",
+    page_title="Symtoms & Cure",
+    page_icon="🎟️",
 )
 
-st.title('Community')
+st.title('Symtoms & Cure')
 
 hide_streamlit_style = """
             <style>
