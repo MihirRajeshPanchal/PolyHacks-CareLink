@@ -67,7 +67,7 @@ def mlmodels():
     
 
 st.set_page_config(
-    page_title="Analyze Diease",
+    page_title="CareLink - Analyze Disease",
     page_icon="🔎",
 )
 st.title('Cardiac Prediction')

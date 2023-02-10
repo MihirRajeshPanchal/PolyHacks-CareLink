@@ -10,7 +10,7 @@ from firebase_admin import firestore
 
 # import components.authenticate as authenticate
 st.set_page_config(
-    page_title="Book Appointment",
+    page_title="CareLink - Book Appointment",
     page_icon="📑",
 )
 
