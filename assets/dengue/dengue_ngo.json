@@ -1,0 +1,38 @@
+{
+    "h1": {
+        "sr" : "NGO 1",
+        "urlToimage": "https://amma.org/sites/default/files/styles/group_main/public/slides/homes-slide4.jpg?itok=TKRICYT3",
+        "name": "HealthHope",
+        "website": "https://www.jaslokhospital.net/",
+        "mail":"healthope@gmail.com",
+        "phone":"022 23452345",
+        "booknow": "https://www.jaslokhospital.net/fix-appointment/select-doctor/0"
+    },
+    "h2": {
+        "sr" : "NGO 2",
+        "urlToimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gUWDqQ0U9zJ9cQqQWOPw0kZZs3P_cdo6iw&usqp=CAU",
+        "name": "Aid For All",
+        "website": "https://www.fortishealthcare.com/",
+        "mail":"aidforall@gmail.com",
+        "phone":"+91 1244921021",
+        "booknow": "https://my.fortishealthcare.com/web-dashboard?%20SourceName=FHL&campaign_id=&_ga=2.101525313.1762870129.1676015923-1256911590.1676015920"
+    },
+    "h3": {
+        "sr" : "NGO 3",
+        "urlToimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCbIJ0imt4gEqUNRLmjSff4S2C1BYLKYlUWw&usqp=CAU",
+        "name": "MedicalMercy",
+        "website": "https://www.rahejahospital.com/",
+        "mail":"medicalmercy@gmail.com",
+        "phone":"+91 8956087400",
+        "booknow": "https://www.rahejahospital.com/#bappoint"
+    },
+    "h4": {
+        "sr" : "NGO 4",
+        "urlToimage": "http://photos.wikimapia.org/p/00/04/12/22/53_big.jpg",
+        "name": "Manav Vikas Seva Sangh",
+        "website": "https://suryahospitals.com/",
+        "mail":"healthharbor@gmail.com",
+        "phone":"+91 8828828100",
+        "booknow": "https://suryahospitals.com/book-an-appointment/"
+    }
+}
