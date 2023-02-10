@@ -5,7 +5,7 @@ from firebase_admin import firestore
 
 
 st.set_page_config(
-    page_title="Financial Aid",
+    page_title="CareLink - Financial Aid",
     page_icon="⛑️",
 )
 

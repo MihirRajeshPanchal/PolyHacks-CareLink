@@ -5,7 +5,12 @@ import numpy as np
 # from multiapp import MultiApp
 # from communities import Dengue,Chickenpox
 
-st.title("DASHBOARD")
+st.set_page_config(
+    page_title="CareLink - Dashboard",
+    page_icon="📈",
+)
+
+st.title("Dashboard")
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}

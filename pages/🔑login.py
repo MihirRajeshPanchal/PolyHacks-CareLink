@@ -5,7 +5,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 st.set_page_config(
-    page_title="Login",
+    page_title="CareLink - Login",
     page_icon="🔑",
 )
 st.title('Login')

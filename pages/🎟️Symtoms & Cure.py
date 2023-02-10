@@ -2,11 +2,11 @@ import streamlit as st
 from scripts import chatgpt
 
 st.set_page_config(
-    page_title="Symtoms & Cure",
+    page_title="CareLink - Symtoms & Cure",
     page_icon="🎟️",
 )
 
-st.title('Symtoms & Cure')
+st.title('Symptoms & Cure')
 
 hide_streamlit_style = """
             <style>
