@@ -9,14 +9,13 @@ st.set_page_config(
     page_title="CareLink - Home",
     page_icon="📈",
 )
-
-st.title("CareLink")
-
 col1, col2 = st.columns(2)
 with col1:
-    st.write("The app aims to assist individuals who are unable to afford medical services due to financial constraints. The platform will connect these individuals with various financial aid resources such as NGOs, government agencies, and speciality hospitals that offer schemes and financial assistance for medical treatment. This web/app provides a solution for those in need by presenting a centralized and accessible way to find financial support for medical services, helping to mitigate the financial burden and allow for necessary medical treatment.")
+    st.image("assets/logo.jpg")
 with col2:
-    st.image("assets/kratos.jpg")
+    st.title("")
+st.subheader("\nBringing hope to those in need")
+st.write("The app aims to assist individuals who are unable to afford medical services due to financial constraints. The platform will connect these individuals with various financial aid resources such as NGOs, government agencies, and speciality hospitals that offer schemes and financial assistance for medical treatment. This web/app provides a solution for those in need by presenting a centralized and accessible way to find financial support for medical services, helping to mitigate the financial burden and allow for necessary medical treatment.")
 
 hide_streamlit_style = """
             <style>

@@ -6,8 +6,8 @@ st.set_page_config(
 )
 
 st.title('Donate')
-st.subheader("The donated amount will be used to help people that require financial aids for various purposes.")
-st.image("assets/qrcode.jpeg", width=300)
+st.subheader("The donated amount will be used to help people that require financial aids to fight various diseases.")
+st.image("assets/qrcode.jpeg", width=200)
 
 name = st.text_input('Name', placeholder='John Doe')
 
