@@ -29,21 +29,7 @@ def mlmodels():
     slope=int(slope)
     ca=int(ca)
     thal=int(thal)
-    
-    # age=int(age)
-    # sex=int(sex)
-    # cp=int(cp)
-    # trestbps=int(trestbps)
-    # chol=int(chol)
-    # fbs=int(fbs)
-    # restecg=int(restecg)
-    # thalach=int(thalach)
-    # exang=int(exang)
-    # oldpeak=float(oldpeak)
-    # slope=int(slope)
-    # ca=int(ca)
-    # thal=int(thal)
-    
+     
     if option=="Logistic Classification":
         from sklearn.linear_model import LogisticRegression
         model = LogisticRegression()
@@ -126,13 +112,6 @@ if st.button('Analyze'):
             st.balloons()
         else:
             st.success("So Sorry, unfortunately You may have heart problem")
-
-        # st.success("Accuracy Received : "+pred)
-        # tts.tts("Accuracy Received : "+pred)
-        
-
-
-st.write('You selected:', option)
 
 hide_streamlit_style = """
             <style>
