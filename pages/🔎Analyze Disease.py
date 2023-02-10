@@ -28,6 +28,12 @@ st.text_input("Enter Number of major vessels (0 - 4) : ",placeholder='1')
 
 st.text_input("Enter Thalassemia (0 - 2) : ",placeholder='1')
 
+option = st.selectbox(
+    'Model Making',
+    ('Logistic', 'Support Vector Machine', 'Naive Bayes'))
+
+st.write('You selected:', option)
+
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
