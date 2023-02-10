@@ -4,7 +4,6 @@ st.set_page_config(
     page_title="Community",
     page_icon="🗨️",
 )
-
 class MultiApp:
     def __init__(self):
         self.apps = []
@@ -22,12 +21,3 @@ class MultiApp:
         for app in self.apps:
             if app['title'] == selected_app:
                 app['function']()
-
-    # def run(self):
-    #     selected_app = st.sidebar.selectbox(
-    #         'Go To',
-    #         [app['title'] for app in self.apps]
-    #     )
-    #     for app in self.apps:
-    #         if app['title'] == selected_app:
-    #             app['function']()

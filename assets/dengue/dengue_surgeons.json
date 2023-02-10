@@ -1,0 +1,34 @@
+{
+    "s1": {
+        "sr" : "Doctor 1",
+        "urlToimage": "https://www.bhatiahospital.org/storage/app/public/doctors/49/image/1502870922Dr.%20Snehal%20Sanghvi.jpg",
+        "name": "Dr Snehal Sanghvi",
+        "mail":"snehal.sanghavi@rfhospital.org",
+        "phone":"+91 9821097649",
+        "booknow": "https://www.jaslokhospital.net/fix-appointment/select-doctor/0"
+    },
+    "s2": {
+        "sr" : "Doctor 2",
+        "urlToimage": "https://doctors.fortishealthcare.com/uploads/assets/doctors/2020/2/1581334105profile.png",
+        "name": "Dr Virag Gokhale",
+        "mail":"viraggokhale@gmail.com",
+        "phone":"+91 9920618987",
+        "booknow": "https://www.jaslokhospital.net/fix-appointment/select-doctor/0"
+    },
+    "s3": {
+        "sr" : "Doctor 3",
+        "urlToimage": "https://content.jdmagicbox.com/comp/mumbai/e5/022pxx22.xx22.131127120230.c3e5/catalogue/dr-r-p-ram-jaslok-hospital-research-centre-pedder-road-mumbai-general-physician-doctors-7v57b-250.jpg",
+        "name": "Dr RP Ram",
+        "mail":"rpramovers@gmail.com",
+        "phone":"+91 7947148836",
+        "booknow": "https://www.jaslokhospital.net/fix-appointment/select-doctor/0"
+    },
+    "s4": {
+        "sr" : "Doctor 4",
+        "urlToimage": "https://images.jdmagicbox.com/comp/mumbai/e5/022pxx22.xx22.171108161620.b2e5/catalogue/dr-dharmen-punatar-mulund-west-mumbai-diabetologist-doctors-kzq9r.jpg",
+        "name": "Dr Naresh R Shetty",
+        "mail":"naresh.shetty@gmail.com",
+        "phone":"022 2674 4930",
+        "booknow": "https://www.jaslokhospital.net/fix-appointment/select-doctor/0"
+    }
+}

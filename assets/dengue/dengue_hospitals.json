@@ -3,24 +3,36 @@
         "sr" : "Hospital 1",
         "urlToimage": "https://cdn.credihealth.com/system/images/assets/35305/original/Jaslok-logo.jpg?1633666916",
         "name": "Jaslok Hospital, Mumbai",
-        "website": "https://www.jaslokhospital.net/"
+        "website": "https://www.jaslokhospital.net/",
+        "mail":"online@jaslokhospital.net",
+        "phone":"022 23452345",
+        "booknow": "https://www.jaslokhospital.net/fix-appointment/select-doctor/0"
     },
     "h2": {
         "sr" : "Hospital 2",
         "urlToimage": "https://assets.lybrate.com/q_auto,f_auto,w_150,h_150,c_fill,g_auto/img/documents/clinic/logo/6a8c09f4a49e6519cca719667c72e698/S-L-Raheja-Fortis-Hospital-Multi-Speciality-Mumbai-8b6acc.png",
         "name": "Fortis Hospital, Mulund, Mumbai",
-        "website": "https://www.fortishealthcare.com/"
+        "website": "https://www.fortishealthcare.com/",
+        "mail":"reachus@fortishealthcare.com",
+        "phone":"+91 1244921021",
+        "booknow": "https://my.fortishealthcare.com/web-dashboard?%20SourceName=FHL&campaign_id=&_ga=2.101525313.1762870129.1676015923-1256911590.1676015920"
     },
     "h3": {
         "sr" : "Hospital 3",
         "urlToimage": "https://cdn.credihealth.com/system/images/assets/11808/original/icon.jpg?1516277122",
         "name": "S L Raheja Hospital, Mahim, Mumbai",
-        "website": "https://www.rahejahospital.com/"
+        "website": "https://www.rahejahospital.com/",
+        "mail":"info@rahejahospital.com",
+        "phone":"+91 8956087400",
+        "booknow": "https://www.rahejahospital.com/#bappoint"
     },
     "h4": {
         "sr" : "Hospital 4",
         "urlToimage": "https://cdn.credihealth.com/system/images/assets/25394/original/logo.jpg?1526987217",
         "name": "Surya Hospital, Mumbai",
-        "website": "https://suryahospitals.com/"
+        "website": "https://suryahospitals.com/",
+        "mail":"surya.communication@suryahospitals.com",
+        "phone":"+91 8828828100",
+        "booknow": "https://suryahospitals.com/book-an-appointment/"
     }
 }
