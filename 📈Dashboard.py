@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="👋",
 )
 
-st.write("# Welcome to Dshboard! 👋")
+st.write("# Welcome to Dashboard! 👋")
 
 hide_streamlit_style = """
             <style>
