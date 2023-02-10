@@ -13,9 +13,6 @@ url = f"https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey={
 r = requests.get(url)
 data = r.json()
 data = data["articles"]
-print(data)
-
-
 
 st.title('News & Update')
 for i in range(20):

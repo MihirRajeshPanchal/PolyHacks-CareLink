@@ -41,7 +41,7 @@ income = st.slider('Select Annual Income', min_value = 0,
 
 option = st.selectbox(
     'For which disease you want Financial Aid',
-    ('','Heart Problem','Chickenpox ', 'Pneumonia', 'Malaria', 'Dengue'))
+    ('','Cancer','Heart Problem','Chickenpox ', 'Pneumonia', 'Malaria', 'Dengue'))
 
 st.write('You selected:', option)
 
