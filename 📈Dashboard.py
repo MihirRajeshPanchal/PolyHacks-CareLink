@@ -1,12 +1,9 @@
 import streamlit as st
 from streamlit_card import card
-<<<<<<< HEAD
-=======
 import pandas as pd
 import numpy as np
 # from multiapp import MultiApp
 # from communities import Dengue,Chickenpox
->>>>>>> afef9ca852975f621c104b821e6659fa5577eb37
 
 st.title("DASHBOARD")
 hide_streamlit_style = """
