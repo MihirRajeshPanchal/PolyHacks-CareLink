@@ -5,6 +5,7 @@ import pandas as pd
 
 
 def mlmodels():
+    global age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal
     df=pd.read_csv("./datasets/heart.csv")
     x = df.drop('target',axis='columns')
     y = df['target']
@@ -14,6 +15,20 @@ def mlmodels():
     sc = StandardScaler()
     x_train = sc.fit_transform(x_train)
     x_test = sc.fit_transform(x_test)
+
+    age=int(age)
+    sex=int(sex)
+    cp=int(cp)
+    trestbps=int(trestbps)
+    chol=int(chol)
+    fbs=int(fbs)
+    restecg=int(restecg)
+    thalach=int(thalach)
+    exang=int(exang)
+    oldpeak=float(oldpeak)
+    slope=int(slope)
+    ca=int(ca)
+    thal=int(thal)
     
     # age=int(age)
     # sex=int(sex)
@@ -27,33 +42,38 @@ def mlmodels():
     # oldpeak=float(oldpeak)
     # slope=int(slope)
     # ca=int(ca)
-    # thal=int(ca)
+    # thal=int(thal)
     
     if option=="Logistic Classification":
         from sklearn.linear_model import LogisticRegression
         model = LogisticRegression()
         model.fit(x_train, y_train)
-        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        ans = model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])[0]
+        return ans
     elif option=="Support Vector Machine Classifications":
         from sklearn.svm import SVC
         model = SVC(kernel = 'linear', random_state = 0)
         model.fit(x_train, y_train)
-        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        ans = model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])[0]
+        return ans
     elif option=="Naive Bayes Classification":
         from sklearn.naive_bayes import GaussianNB
         model = GaussianNB()
         model.fit(x_train, y_train)
-        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        ans = model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])[0]
+        return ans
     elif option=="K Nearest Neighbor Classification":
         from sklearn.neighbors import KNeighborsClassifier
         model = KNeighborsClassifier(n_neighbors=3, metric = 'minkowski', p=2)
         model.fit(x_train, y_train)
-        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        ans = model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])[0]
+        return ans
     elif option=="Decision Tree Classifier":
         from sklearn.tree import DecisionTreeClassifier
         model = DecisionTreeClassifier()
         model.fit(x_train, y_train)
-        # return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        ans = model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])[0]
+        return ans
     return model.score(x_train,y_train)
     
     
@@ -100,11 +120,16 @@ if st.button('Analyze'):
         tts.tts("Please fill all the data")
     else:
         pred = mlmodels()
-        pred=pred*100
         pred=str(pred)
-        st.success("Accuracy Received : "+pred)
-        tts.tts("Accuracy Received : "+pred)
-        st.balloons()
+        if pred == "0":
+            st.success("Congrats!! You dont have heart problem")
+            st.balloons()
+        else:
+            st.success("So Sorry, unfortunately You may have heart problem")
+
+        # st.success("Accuracy Received : "+pred)
+        # tts.tts("Accuracy Received : "+pred)
+        
 
 
 st.write('You selected:', option)
