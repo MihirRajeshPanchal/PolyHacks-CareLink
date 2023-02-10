@@ -2,7 +2,9 @@ from sklearn import preprocessing
 import streamlit as st
 from scripts import tts
 import pandas as pd
-
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 
 def mlmodels():
     global age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal
@@ -112,6 +114,25 @@ if st.button('Analyze'):
             st.balloons()
         else:
             st.success("So Sorry, unfortunately You may have heart problem")
+        db = firestore.client()
+        doc_ref = db.collection(u'polyhacks').document(u'model_prediction')
+        doc_ref.set({
+            'age': age,
+            'sex': sex,
+            'cp': cp,
+            'trestbps':trestbps,
+            'chol':chol,
+            'fbs':fbs,
+            'restecg':restecg,
+            'thalach':thalach,
+            'exang':exang,
+            'oldpeak':oldpeak,
+            'slope':slope,
+            'ca':ca,
+            'thal':thal,
+            'prediction':pred,
+        })
+        
 
 hide_streamlit_style = """
             <style>

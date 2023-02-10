@@ -1,4 +1,9 @@
 import streamlit as st
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+
 st.set_page_config(
     page_title="Financial Aid",
     page_icon="⛑️",
@@ -50,4 +55,14 @@ if st.button('Apply'):
     if name =='' or email_id == '' or mob_no =='':
         st.error('Please fill the necessary details !')
     else:
-        st.success("Applied Successfully !")
+        st.success("Applied Successfully !")   
+        db = firestore.client()
+        doc_ref = db.collection(u'polyhacks').document(u'financial aid')
+        doc_ref.set({
+            u'name': name,
+            u'email_id': email_id,
+            u'mob_no': mob_no,
+            u'annual_income': val,
+            u'disease': option,
+        })
+        st.balloons()
