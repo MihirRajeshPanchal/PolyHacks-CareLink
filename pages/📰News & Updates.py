@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title('News & Update')
+st.title('News & Updates')
 
 hide_streamlit_style = """
             <style>
