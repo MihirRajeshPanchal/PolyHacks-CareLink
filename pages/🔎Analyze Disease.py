@@ -1,10 +1,10 @@
 import streamlit as st
 from scripts import tts
+import pandas as pd
 
 
 def mlmodels():
-    import pandas as pd
-    df=pd.read_csv("../datasets/heart.csv")
+    df=pd.read_csv("./datasets/heart.csv")
     x = df.drop('target',axis='columns')
     y = df['target']
     from sklearn.model_selection import train_test_split
@@ -17,18 +17,21 @@ def mlmodels():
         from sklearn.linear_model import LogisticRegression
         model = LogisticRegression()
         model.fit(x_train, y_train)
-        return model.predict(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
+        return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
     elif option=="Support Vector Machine Classifications":
         pass
     elif option=="Naive Bayes Classification":
         pass
     elif option=="K Nearest Neighbor Classification":
-        pass
+        from sklearn.neighbors import KNeighborsClassifier
+        model = KNeighborsClassifier(n_neighbors=3, metric = 'minkowski', p=2)
+        model.fit(x_train, y_train)
+        return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
     elif option=="Decision Tree Classifier":
         from sklearn.tree import DecisionTreeClassifier
         model = DecisionTreeClassifier()
         model.fit(x_train, y_train)
-        return model.predict(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
+        return model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
     
     
 
@@ -68,14 +71,14 @@ option = st.selectbox(
     'Model Making',
     ('Logistic Classification', 'Support Vector Machine Classifications', 'Naive Bayes Classification' , 'K Nearest Neighbor Classification',))
 
-if st.button('Login'):
+if st.button('Analyze'):
     if age == '' or sex == '' or cp== '' or trestbps=='' or chol == '' or fbs == "" or restecg == "" or thalach=="" or exang=="" or oldpeak=="" or slope=="" or ca=="" or thal=="":
         st.error("Please fill all the data")
         tts.tts("Please fill all the data")
     else:
-        acc = mlmodels()
-        st.success("Accuracy Received : ",acc)
-        tts.tts("Accuracy Received : ",acc)
+        pred = mlmodels()
+        st.success("Accuracy Received : ",pred)
+        tts.tts("Accuracy Received : ",pred)
         st.balloons()
 
 
