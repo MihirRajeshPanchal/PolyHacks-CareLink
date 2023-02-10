@@ -19,6 +19,6 @@ def chatgpt(message):
     )
 
     response = completion.choices[0].text
-    print(response)
+    return response
     
 # chatgpt(input("Enter something : "))
