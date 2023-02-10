@@ -11,7 +11,7 @@ st.set_page_config(
 
 st.title('Signup')
 
-first_name = st.text_input('Fisrt Name', placeholder='John')
+first_name = st.text_input('First Name', placeholder='John')
 # st.write('The Patient Name is', first_name)
 
 last_name = st.text_input('Last Name', placeholder='Doe')
