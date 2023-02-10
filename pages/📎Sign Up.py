@@ -1,5 +1,8 @@
 import streamlit as st
 from scripts import tts
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 
 st.set_page_config(
     page_title="SignUp",
@@ -27,6 +30,12 @@ if st.button('Sign Up'):
     else:
         st.success('Sign Up Successfull !')
         tts.tts("Sign Up Successfull !")
+        db = firestore.client()
+        doc_ref = db.collection(u'polyhacks').document(u'signup')
+        doc_ref.set({
+            u'email': email_id,
+            u'password': passwd,
+        })
         st.balloons()
 
 hide_streamlit_style = """
