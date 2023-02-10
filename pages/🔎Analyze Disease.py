@@ -1,4 +1,15 @@
 import streamlit as st
+from scripts import tts
+
+
+def mlmodels():
+    if option=="Logistic Classification":
+        pass
+    elif option=="Support Vector Machine Classifications":
+        pass
+    elif option=="Naive Bayes Classification":
+        pass
+    
 
 st.title('Cardiac Prediction')
 
@@ -32,14 +43,16 @@ option = st.selectbox(
     'Model Making',
     ('Logistic Classification', 'Support Vector Machine Classifications', 'Naive Bayes Classification'))
 
+if st.button('Login'):
+    if age == '' or sex == '' or cp== '' or trestbps=='' or chol == '' or fbs == "" or restecg == "" or thalach=="" or exang=="" or oldpeak=="" or slope=="" or ca=="" or thal=="":
+        st.error("Please fill all the data")
+        tts.tts("Please fill all the data")
+    else:
+        acc = mlmodels()
+        st.success("Accuracy Received : ",acc)
+        tts.tts("Accuracy Received : ",acc)
+        st.balloons()
 
-
-if option=="Logistic Classification":
-    pass
-elif option=="Support Vector Machine Classifications":
-    pass
-elif option=="Naive Bayes Classification":
-    pass
 
 st.write('You selected:', option)
 
