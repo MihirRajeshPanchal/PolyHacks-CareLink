@@ -3,7 +3,7 @@ from scripts import chatgpt
 from scripts import tts
 
 st.set_page_config(
-    page_title="Connect",
+    page_title="CareLink - Connect",
     page_icon="👪",
 )
 

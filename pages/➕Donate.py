@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Donate",
+    page_title="CareLink - Donate",
     page_icon="➕",
 )
 
