@@ -1,5 +1,10 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Community",
+    page_icon="🗨️",
+)
+
 class MultiApp:
     def __init__(self):
         self.apps = []
@@ -11,7 +16,7 @@ class MultiApp:
         })
     def run(self):
         selected_app = st.selectbox(
-            'Diease Name',
+            'Disease Name',
             [app['title'] for app in self.apps]
         )
         for app in self.apps:

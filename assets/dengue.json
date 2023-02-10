@@ -1,0 +1,26 @@
+{
+    "h1": {
+        "sr" : "Hospital 1",
+        "urlToimage": "https://cdn.credihealth.com/system/images/assets/35305/original/Jaslok-logo.jpg?1633666916",
+        "name": "Jaslok Hospital, Mumbai",
+        "website": "https://www.jaslokhospital.net/"
+    },
+    "h2": {
+        "sr" : "Hospital 2",
+        "urlToimage": "https://assets.lybrate.com/q_auto,f_auto,w_150,h_150,c_fill,g_auto/img/documents/clinic/logo/6a8c09f4a49e6519cca719667c72e698/S-L-Raheja-Fortis-Hospital-Multi-Speciality-Mumbai-8b6acc.png",
+        "name": "Fortis Hospital, Mulund, Mumbai",
+        "website": "https://www.fortishealthcare.com/"
+    },
+    "h3": {
+        "sr" : "Hospital 3",
+        "urlToimage": "https://cdn.credihealth.com/system/images/assets/11808/original/icon.jpg?1516277122",
+        "name": "S L Raheja Hospital, Mahim, Mumbai",
+        "website": "https://www.rahejahospital.com/"
+    },
+    "h4": {
+        "sr" : "Hospital 4",
+        "urlToimage": "https://cdn.credihealth.com/system/images/assets/25394/original/logo.jpg?1526987217",
+        "name": "Surya Hospital, Mumbai",
+        "website": "https://suryahospitals.com/"
+    }
+}
