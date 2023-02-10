@@ -5,7 +5,10 @@ from urllib.error import URLError
 import datetime
 from datetime import date
 # import components.authenticate as authenticate
-
+st.set_page_config(
+    page_title="Book Appointment",
+    page_icon="📑",
+)
 
 # Page configuration
 st.title('Book Appointment')
