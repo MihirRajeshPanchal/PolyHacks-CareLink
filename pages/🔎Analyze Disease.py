@@ -2,7 +2,9 @@ from sklearn import preprocessing
 import streamlit as st
 from scripts import tts
 import pandas as pd
-
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 
 def mlmodels():
     global age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal
@@ -29,21 +31,7 @@ def mlmodels():
     slope=int(slope)
     ca=int(ca)
     thal=int(thal)
-    
-    # age=int(age)
-    # sex=int(sex)
-    # cp=int(cp)
-    # trestbps=int(trestbps)
-    # chol=int(chol)
-    # fbs=int(fbs)
-    # restecg=int(restecg)
-    # thalach=int(thalach)
-    # exang=int(exang)
-    # oldpeak=float(oldpeak)
-    # slope=int(slope)
-    # ca=int(ca)
-    # thal=int(thal)
-    
+     
     if option=="Logistic Classification":
         from sklearn.linear_model import LogisticRegression
         model = LogisticRegression()
@@ -126,13 +114,25 @@ if st.button('Analyze'):
             st.balloons()
         else:
             st.success("So Sorry, unfortunately You may have heart problem")
-
-        # st.success("Accuracy Received : "+pred)
-        # tts.tts("Accuracy Received : "+pred)
+        db = firestore.client()
+        doc_ref = db.collection(u'polyhacks').document(u'model_prediction')
+        doc_ref.set({
+            'age': age,
+            'sex': sex,
+            'cp': cp,
+            'trestbps':trestbps,
+            'chol':chol,
+            'fbs':fbs,
+            'restecg':restecg,
+            'thalach':thalach,
+            'exang':exang,
+            'oldpeak':oldpeak,
+            'slope':slope,
+            'ca':ca,
+            'thal':thal,
+            'prediction':pred,
+        })
         
-
-
-st.write('You selected:', option)
 
 hide_streamlit_style = """
             <style>
