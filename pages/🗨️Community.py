@@ -1,11 +1,14 @@
 import streamlit as st
+from streamlit_card import card
+from multiapp import MultiApp
+from communities import Dengue,Chickenpox
 
-st.set_page_config(
-    page_title="Community",
-    page_icon="🗨️",
-)
+app = MultiApp()
 
-st.title('Community')
+app.add_app("Dengue", Dengue.app)
+app.add_app("Chickenpox", Chickenpox.app)
+
+app.run()
 
 hide_streamlit_style = """
             <style>
