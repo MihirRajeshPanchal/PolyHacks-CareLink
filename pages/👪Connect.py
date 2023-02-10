@@ -16,7 +16,7 @@ def chatgptcall():
     
 
 st.title('Connect Us')
-st.button("Chatgpt",on_click=chatgptcall)
+st.button("Create a Google Mee",on_click=chatgptcall)
 st.button("TTS",on_click=ttscall)
 
 hide_streamlit_style = """
