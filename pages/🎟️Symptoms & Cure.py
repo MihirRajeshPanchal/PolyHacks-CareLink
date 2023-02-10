@@ -2,7 +2,7 @@ import streamlit as st
 from scripts import chatgpt
 
 st.set_page_config(
-    page_title="CareLink - Symtoms & Cure",
+    page_title="CareLink - Symptoms & Cure",
     page_icon="🎟️",
 )
 

@@ -55,7 +55,7 @@ if st.button('Apply'):
     if name =='' or email_id == '' or mob_no =='':
         st.error('Please fill the necessary details !')
     else:
-        st.success("Applied Successfully !")   
+        st.success("We will come back to you in 3 working days !")   
         db = firestore.client()
         doc_ref = db.collection(u'polyhacks').document(u'financial aid')
         doc_ref.set({
