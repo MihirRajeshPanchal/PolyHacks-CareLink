@@ -1,4 +1,9 @@
 import streamlit as st
+
+st.set_page_config(
+    page_title="News & Update",
+    page_icon="📰",
+)
 import requests
 from streamlit_card import card
 

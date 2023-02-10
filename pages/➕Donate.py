@@ -1,5 +1,10 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Donate",
+    page_icon="➕",
+)
+
 st.title('Donate')
 
 hide_streamlit_style = """

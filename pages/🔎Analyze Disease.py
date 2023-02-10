@@ -32,6 +32,10 @@ def mlmodels():
     
     
 
+st.set_page_config(
+    page_title="Analyze Diease",
+    page_icon="🔎",
+)
 st.title('Cardiac Prediction')
 
 age = st.text_input("Enter Your age : ",placeholder='50')
